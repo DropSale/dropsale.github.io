@@ -18,7 +18,7 @@
     <style type="text/css">
     .form-control {
     display: block;
-    margin-top: .5rem;
+    margin-top: .8rem;
     width: 100%;
     padding: .6rem .75rem;
     font-size: 1rem;
@@ -30,6 +30,12 @@
     border: 1.5px solid rgba(0,0,0,.15);
     border-radius: .3rem;
     transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+    .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 0px;
+    margin-left: 0px;
 }</style>
   </head>
   <body>
@@ -43,10 +49,14 @@
     margin-bottom: 1rem;
 ">Информация для доставки</label>
     <div class="row align-items-start">
-      <div class="col">
+      <div class="col"> style="
+    padding-right: .4rem;
+"
     <input type="firstname" class="form-control" id="FirstName" placeholder="Имя">
       </div>
-      <div class="col">
+      <div class="col"> style="
+    padding-left: .4rem;
+"
     <input type="lastname" class="form-control" id="LastName" placeholder="Фамилия">
       </div></div>
     <input type="email" class="form-control" id="Email" aria-describedby="emailHelp" placeholder="Адрес эл. почты">
