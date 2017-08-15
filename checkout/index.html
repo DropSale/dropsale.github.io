@@ -15,14 +15,27 @@
     <link rel="shortcut icon" href="/favicon.ico?3" type="image/x-icon">
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/bootstrap-extra.css" rel="stylesheet">
+<style>
+   div {
+    padding: 10px;
+    background: #e8bfad;
+    margin: auto;
+   }
+   @media screen and (min-device-width: 1600px) {
+    div {width: 1500px;}
+   }
+   @media screen and (device-width: 1280px) {
+    div {width: 1100px;}
+   }
+   @media screen and (device-width: 1024px) {
+    div {width: 980px;}
+   }
+  </style>
     <style>
     </style>
   </head>
   <body>
       <div class="container">
-          @media (min-width: 650px) {
-
-}
   <div class="form-group">
     <label for="exampleInputEmail1">Email address</label>
     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
