@@ -88,17 +88,24 @@
     <label for="Payment" style="
     font-size: 1.3rem;
 ">Способ оплаты</label>
-    <div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Dropdown button
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="#">Action</a>
-    <a class="dropdown-item" href="#">Another action</a>
-    <a class="dropdown-item" href="#">Something else here</a>
-  </div>
-</div>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Номер карты">
+    <input type="text" class="form-control" id="cardNumber" placeholder="Номер карты">
+      <div class="row align-items-start">
+      <div class="col" style="
+    padding-right: .4rem;
+    padding-left: 0rem;
+">
+    <input type="text" class="form-control" id="cardHolderFirstName" placeholder="Имя">
+      </div>
+      <div class="col" style="
+    padding-right: 0rem;
+    padding-left: .4rem;
+">
+    <input type="text" class="form-control" id="cardHolderLastName" placeholder="Фамилия">
+      </div></div>
+    <input type="text" class="form-control" id="cardHolderPatronymic" placeholder="Отчество">
+    <small class="form-text text-muted"style="
+    margin-top: .55rem;
+">Эти данные будут необходимы для идентификации вашего перевода.</small>
   </div><div class="text-center">
   <button type="submit" class="btn btn-primary" style="padding: .7rem 1.8rem;
     font-size: 1.1rem;
