@@ -160,17 +160,17 @@ function validate(){
         $('#cardFirstName').val().length  >   0   &&
         $('#cardLastName').val().length  >   0   &&
         $('#cardMiddleName').val().length  >   0) {
-  function submit(){
-      $('.btn-primary').css({"background-color":"#037BFF"});
-      window.open("tg://resolve?domain=DropSaleBot","_parent")
+  $('.btn-primary').css({"background-color":"#037BFF"});
+    }
+    function submit(){
+    window.open("tg://resolve?domain=DropSaleBot","_parent")
   }
-        $('.btn-primary').on('touchstart mousedown', function(e) {  
+$('.btn-primary').on('touchstart mousedown', function(e) {  
     $(this).css({"background-color":"#0268D9"});
 });
 $('.btn-primary').on('touchend mouseup', function(e) {  
     $(this).css({"background-color":"#037BFF"});
 });
-    }
     else {
       $('.btn-primary').css({"background-color":"#AEAEAE"});
     }
