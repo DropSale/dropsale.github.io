@@ -46,7 +46,7 @@
     padding: 0rem 0rem;
 ">
   <div class="text-center">
-  <button type="submit" class="btn btn-primary" style="padding: .7rem 4rem;
+  <button type="submit" onclick="submit();" href="javascript:;" class="btn btn-primary" style="padding: .7rem 4rem;
     font-size: 1.1rem;
     margin-top: .7rem;
     margin-bottom: .7rem;
@@ -69,15 +69,15 @@
     padding-right: .4rem;
     padding-left: 0rem;
 ">
-    <input type="firstname" class="form-control" id="FirstName" placeholder="Имя">
+    <input type="firstname" class="form-control" id="ShippingFirstName" placeholder="Имя">
       </div>
       <div class="col" style="
     padding-right: 0rem;
     padding-left: .4rem;
 ">
-    <input type="lastname" class="form-control" id="LastName" placeholder="Фамилия">
+    <input type="lastname" class="form-control" id="ShippingLastName" placeholder="Фамилия">
       </div></div>
-    <input type="text" class="form-control" id="Patronymic" placeholder="Отчество">
+    <input type="text" class="form-control" id="ShippingPatronymic" placeholder="Отчество">
     <input type="email" class="form-control" id="Email" placeholder="Адрес эл. почты">
     <input type="tel" class="form-control" id="PhoneNumber" placeholder="Номер телефона">
     <small class="form-text text-muted"style="
@@ -124,26 +124,25 @@
     margin-top: .55rem;
 ">Эти данные будут необходимы для идентификации вашего перевода.</small>
       </div></div>
-    <!-- jQuery library -->
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 
-<!-- Popper -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
 
-<!-- Latest compiled and minified Bootstrap JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
 
-<!-- Initialize Bootstrap functionality -->
 <script>
-// Initialize tooltip component
 $(function () {
   $('[data-toggle="tooltip"]').tooltip()
 })
-
-// Initialize popover component
 $(function () {
   $('[data-toggle="popover"]').popover()
 })
+</script>
+      
+<script type="text/javascript">
+  function submit(){
+      window.open("tg://resolve?domain=DropSaleBot, "_parent")
+  }
 </script>
 
 </body></html>
