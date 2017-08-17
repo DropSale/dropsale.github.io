@@ -50,7 +50,7 @@
      font-size: 1.1rem;
      margin-top: .7rem;
      margin-bottom: .7rem;
-     background-color: #037BFF;
+     background-color: #AEAEAE;
      border-color: transparent;
      border-radius: 10rem;">Продолжить</button>
 </div>
@@ -111,15 +111,15 @@
     padding-right: .4rem;
     padding-left: 0rem;
 ">
-    <input type="text" class="form-control" id="СardHolderFirstName" placeholder="Имя">
+    <input type="text" class="form-control" id="cardFirstName" placeholder="Имя">
       </div>
       <div class="col" style="
     padding-right: 0rem;
     padding-left: .4rem;
 ">
-    <input type="text" class="form-control" id="СardHolderLastName" placeholder="Фамилия">
+    <input type="text" class="form-control" id="cardLastName" placeholder="Фамилия">
       </div></div>
-    <input type="text" class="form-control" id="СardHolderPatronymic" placeholder="Отчество">
+    <input type="text" class="form-control" id="cardPatronymic" placeholder="Отчество">
     <small class="form-text text-muted"style="
     margin-top: .55rem;
 ">Эти данные будут необходимы для идентификации вашего перевода.</small>
@@ -139,18 +139,50 @@ $(function () {
 })
 </script>
       
+
 <script>
+$(document).ready(function (){
+    validate();
+    $('#shippingFirstName, #shippingLastName, #shippingPatronymic, #shippingEmail, #shippingPhoneNumber, #shippingStreetAddress1, #shippingCity, #shippingRegion, #shippingZipCode, #cardNumber, #cardFirstName, #cardLastName, #cardMiddleName').change(validate);
+});
+
+function validate(){
+    if ($('#shippingFirstName').val().length   >   0   &&
+        $('#shippingLastName').val().length  >   0   &&
+        $('#shippingMiddleName').val().length  >   0   &&
+        $('#shippingEmail').val().length  >   0   &&
+        $('#shippingPhoneNumber').val().length  >   0   &&
+        $('#shippingStreetAddress1').val().length  >   0   &&
+        $('#shippingCity').val().length  >   0   &&
+        $('#shippingRegion').val().length  >   0   &&
+        $('#shippingZipCode').val().length  >   0   &&
+        $('#cardNumber').val().length  >   0   &&
+        $('#cardFirstName').val().length  >   0   &&
+        $('#cardLastName').val().length  >   0   &&
+        $('#cardMiddleName').val().length  >   0) {
   function submit(){
+      $('.btn-primary').css({"background-color":"#037BFF"});
       window.open("tg://resolve?domain=DropSaleBot","_parent")
   }
-</script>
-<script>
-$('.btn-primary').on('touchstart mousedown', function(e) {  
+        $('.btn-primary').on('touchstart mousedown', function(e) {  
     $(this).css({"background-color":"#0268D9"});
 });
 $('.btn-primary').on('touchend mouseup', function(e) {  
     $(this).css({"background-color":"#037BFF"});
 });
+    }
+    else {
+      $('.btn-primary').css({"background-color":"#AEAEAE"});
+    }
+}
+</script>
+<script>
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+$(function () {
+  $('[data-toggle="popover"]').popover()
+})
 </script>
 
 </body></html>
