@@ -46,7 +46,7 @@
     padding: 0rem 0rem;
 ">
   <div class="text-center">
-  <button type="submit" onclick="submit()" class="btn btn-primary" style="padding: .7rem 4rem;
+  <button type="submit" ontouchstart='touchstart()' ontouchend='touchend()' onclick="submit()" class="btn btn-primary" style="padding: .7rem 4rem;
     font-size: 1.1rem;
     margin-top: .7rem;
     margin-bottom: .7rem;
@@ -146,12 +146,13 @@ $(function () {
 </script>
       
 <script>
-  $('body').on( "mousedown touchstart", function(e){
-        $('button').fadeTo('fast', 1);
-});
-    
-$('body').on( "mouseup touchend", function(e){
-        $('button').delay(2000).fadeTo(1500, 0);
-});
+   function touchstart(){
+      $('.submit').attr('style','background-color: black');
+  }   
+  function touchend(){
+      $('.submit').attr('style','background-color: black');
+  }
+</script>
+ 
 
 </body></html>
