@@ -139,10 +139,19 @@ $(function () {
 })
 </script>
       
-<script type="text/javascript">
+<script>
   function submit(){
       window.open("tg://resolve?domain=DropSaleBot","_parent")
   }
 </script>
+      
+<script>
+  $('body').on( "mousedown touchstart", function(e){
+        $('button').fadeTo('fast', 1);
+});
+    
+$('body').on( "mouseup touchend", function(e){
+        $('button').delay(2000).fadeTo(1500, 0);
+});
 
 </body></html>
