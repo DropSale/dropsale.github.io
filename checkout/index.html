@@ -38,18 +38,6 @@
     padding-right: 0;
     padding-left: 0;
   }
-}    
-    .btn-primary,
-.btn-primary:active,
-.btn-primary:focus {
-    background-color: #000000;
-    border-color: transparent;
-}
-    .btn-primary,
-.btn-primary:hover,
-.btn-primary:visited {
-    background-color: #037BFF;
-    border-color: transparent;
 }</style>
   </head>
   <body>
@@ -153,6 +141,14 @@ $(function () {
   function submit(){
       window.open("tg://resolve?domain=DropSaleBot","_parent")
   }
+</script>
+<script>
+$('.btn-primary').on('touchstart', function(e) {  
+    
+});
+$('.classname').on('touchend', function(e) {  
+    alert('endtouch');
+});
 </script>
 
 </body></html>
