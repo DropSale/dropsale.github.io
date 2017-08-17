@@ -46,7 +46,7 @@
     padding: 0rem 0rem;
 ">
   <div class="text-center">
-  <button type="submit" ontouchstart='touchstart()' ontouchend='touchend()' onclick="submit()" class="btn btn-primary" style="padding: .7rem 4rem;
+  <button type="submit" onclick="submit()" class="btn btn-primary" style="padding: .7rem 4rem;
     font-size: 1.1rem;
     margin-top: .7rem;
     margin-bottom: .7rem;
@@ -144,15 +144,5 @@ $(function () {
       window.open("tg://resolve?domain=DropSaleBot","_parent")
   }
 </script>
-      
-<script>
-   function touchstart(){
-      $('.submit').attr('style','background-color: black');
-  }   
-  function touchend(){
-      $('.submit').attr('style','background-color: black');
-  }
-</script>
- 
 
 </body></html>
