@@ -143,7 +143,7 @@ $(function () {
 <script>
 $(document).ready(function (){
     validate();
-    $('#shippingFirstName, #shippingLastName, #shippingPatronymic, #shippingEmail, #shippingPhoneNumber, #shippingStreetAddress1, #shippingCity, #shippingRegion, #shippingZipCode, #cardNumber, #cardFirstName, #cardLastName, #cardMiddleName').change(validate);
+    $('#shippingFirstName, #shippingLastName, #shippingPatronymic, #shippingEmail, #shippingPhoneNumber, #shippingStreetAddress1, #shippingCity, #shippingRegion, #shippingZipCode, #cardNumber, #cardFirstName, #cardLastName, #cardMiddleName').keyup(validate);
 });
 function validate(){
     if ($('#shippingFirstName').val().length   >   0   &&
