@@ -50,6 +50,8 @@
      font-size: 1.1rem;
      margin-top: .7rem;
      margin-bottom: .7rem;
+     background-color: #037BFF;
+     border-color: transparent;
      border-radius: 10rem;">Продолжить</button>
 </div>
 </nav>
@@ -144,10 +146,10 @@ $(function () {
 </script>
 <script>
 $('.btn-primary').on('touchstart', function(e) {  
-    
+    $(this).css({"background-color":"black"});
 });
 $('.btn-primary').on('touchend', function(e) {  
-    alert('endtouch');
+    $(this).css({"background-color":"#037BFF"});
 });
 </script>
 
