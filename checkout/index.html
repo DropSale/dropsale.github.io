@@ -141,8 +141,20 @@ $(function () {
       
 
 <script>
-$(document).keyup(function(){
- if ($('#shippingFirstName, #shippingLastName, #shippingPatronymic, #shippingEmail, #shippingPhoneNumber, #shippingStreetAddress1, #shippingCity, #shippingRegion, #shippingZipCode, #cardNumber, #cardFirstName, #cardLastName, #cardMiddleName').val().length > 0) {
+$(document).on('keyup', function(e) {
+    if ($('#shippingFirstName').val().length   >   0   &&
+        $('#shippingLastName').val().length  >   0   &&
+        $('#shippingMiddleName').val().length  >   0   &&
+        $('#shippingEmail').val().length  >   0   &&
+        $('#shippingPhoneNumber').val().length  >   0   &&
+        $('#shippingStreetAddress1').val().length  >   0   &&
+        $('#shippingCity').val().length  >   0   &&
+        $('#shippingRegion').val().length  >   0   &&
+        $('#shippingZipCode').val().length  >   0   &&
+        $('#cardNumber').val().length  >   0   &&
+        $('#cardFirstName').val().length  >   0   &&
+        $('#cardLastName').val().length  >   0   &&
+        $('#cardMiddleName').val().length  >   0) {
         $('.btn-primary').css({"background-color":"#037BFF"});
   function submit(){
       window.open("tg://resolve?domain=DropSaleBot","_parent")
@@ -157,7 +169,8 @@ $('.btn-primary').on('touchend mouseup', function(e) {
     else {
       $('.btn-primary').css({"background-color":"#AEAEAE"});
     }
-}
+} 
+    );
 </script>
 <script>
 $(function () {
