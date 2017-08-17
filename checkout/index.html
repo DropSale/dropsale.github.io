@@ -145,10 +145,10 @@ $(function () {
   }
 </script>
 <script>
-$('.btn-primary').on('touchstart', function(e) {  
-    $(this).css({"background-color":"black"});
+$('.btn-primary').on('touchstart mousedown', function(e) {  
+    $(this).css({"background-color":"#0268D9"});
 });
-$('.btn-primary').on('touchend', function(e) {  
+$('.btn-primary').on('touchend mouseup', function(e) {  
     $(this).css({"background-color":"#037BFF"});
 });
 </script>
