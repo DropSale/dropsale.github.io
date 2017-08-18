@@ -170,7 +170,7 @@ $('#shippingFirstName, #shippingLastName, #shippingMiddleName, #shippingEmail, #
         JSON.name = $('#cardFirstName').val();
         JSON.name = $('#cardLastName').val();
         JSON.name = $('#cardMiddleName').val();
-            var JSONstring = JSON.stringify(myObject);
+            var JSONstring = JSON.stringify(JSON);
             var JSONbase64 = window.btoa(JSONstring);
       window.open("tg://resolve?domain=DropSaleFeedbackBot&start="+JSONbase64,"_parent")});
         $('.btn-primary').on('touchstart', function(e) {  
